@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Aventis - Sell Your Car</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+    <style>
+        /* Custom styles for the sell car form */
+        .sell-car-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .sell-car-form h1 {
+            color: #2a2a2a;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .sell-car-form h2 {
+            color: #2a2a2a;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .sell-car-form label {
+            color: #4a4a4a;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        
+        .sell-car-form input,
+        .sell-car-form select,
+        .sell-car-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .sell-car-form .form-section {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: #e9ecef;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #f33f3f;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .step-counter {
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        
+        .btn-next {
+            background-color: #f33f3f;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-next:hover {
+            background-color: #d62c2c;
+        }
+        
+        .btn-prev {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-prev:hover {
+            background-color: #5a6268;
+        }
+        
+        /* Radio button styling */
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            width: auto;
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sell-car-form {
+                padding: 15px;
+            }
+            
+            .form-section {
+                padding: 15px;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <ul class="left-info">
+              <li><a href="#"><i class="fa fa-envelope"></i>contact@carbuyerconnect.com</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>+1 (437) 435-5719</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="right-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>Aventis<em> </em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cars.html">Cars</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+              
+                <div class="dropdown-menu">
+                    <a class="dropdown-item active" href="about.html">Sell Your Car</a>
+                    <a class="dropdown-item" href="blog.html">Blog</a>
+                    <a class="dropdown-item" href="team.html">Team</a>
+                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                    <a class="dropdown-item" href="terms.html">Terms</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Credit Financing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Sell Your Car</h1>
+            <span>Fill out the form below to get an offer for your vehicle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="sell-car-form">
+            <h1>Sell Your Car</h1>
+            <div class="mb-4">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progressBar" style="width: 14.2857%"></div>
+                </div>
+                <p class="step-counter" id="stepCounter">
+                    Step 1 of 7
+                </p>
+            </div>
+
+            <!-- Form Start -->
+            <form id="sellCarForm">
+                <!-- Step 1: Car Detail -->
+                <section class="form-section" id="step1">
+                    <h2>Car Detail</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Body Trim</label>
+                                <select name="bodyTrim" class="form-control" required>
+                                    <option value="">Select Body Trim</option>
+                                    <option value="Base">Base</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Luxury">Luxury</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Style</label>
+                                <select name="style" class="form-control" required>
+                                    <option value="">Select Style</option>
+                                    <option value="Coupe">Coupe</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Exterior Colour</label>
+                                <select name="exteriorColour" class="form-control" required>
+                                    <option value="">Select Exterior Colour</option>
+                                    <option value="Beige">Beige</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Brown">Brown</option>
+                                    <option value="Gold">Gold</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Grey">Grey</option>
+                                    <option value="Maroon">Maroon</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Pink">Pink</option>
+                                    <option value="Purple">Purple</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Silver">Silver</option>
+                                    <option value="White">White</option>
+                                    <option value="Yellow">Yellow</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Interior Colour</label>
+                                <select name="interiorColour" class="form-control" required>
+                                    <option value="">Select Interior Colour</option>
+                                    <option value="Beige">Beige</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Brown">Brown</option>
+                                    <option value="Gold">Gold</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Grey">Grey</option>
+                                    <option value="Maroon">Maroon</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Pink">Pink</option>
+                                    <option value="Purple">Purple</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Silver">Silver</option>
+                                    <option value="White">White</option>
+                                    <option value="Yellow">Yellow</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Transmission</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="transmission" value="Automatic" required> Automatic
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="transmission" value="Manual" required> Manual
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 2: Car Specifications -->
+                <section class="form-section" id="step2" style="display: none;">
+                    <h2>Car Specifications</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Manufacture Year <span class="text-danger">*</span></label>
+                                <input type="number" name="manufactureYear" min="1925" step="1" placeholder="Enter year" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mileage (km) <span class="text-danger">*</span></label>
+                                <input type="number" name="totalRun" min="1" step="1" placeholder="Enter mileage" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 3: Vehicle History -->
+                <section class="form-section" id="step3" style="display: none;">
+                    <h2>Vehicle History</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Does your vehicle have any existing exterior damage?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="exteriorDamage" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="exteriorDamage" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Does your vehicle have any existing interior damage?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="interiorDamage" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="interiorDamage" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Does your vehicle have any accidents or claims in its history?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="accidentHistory" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="accidentHistory" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Has your vehicle ever been smoked in?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="smoked" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="smoked" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Are there any chips or cracks in the windshield?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="windshieldDamage" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="windshieldDamage" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>How many key fobs do you have for your vehicle?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="keyFobs" value="None" required> None
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="keyFobs" value="1 Key Fob" required> 1 Key Fob
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="keyFobs" value="2+ Key Fobs" required> 2+ Key Fobs
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 4: Vehicle Condition -->
+                <section class="form-section" id="step4" style="display: none;">
+                    <h2>Vehicle Condition</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>When did you last replace your tires?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="tireReplacement" value="Less than 2 Years Ago" required> Less than 2 Years Ago
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="tireReplacement" value="2 to 4 Years Ago" required> 2 to 4 Years Ago
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="tireReplacement" value="More than 4 Years Ago or Unsure" required> More than 4 Years Ago or Unsure
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Have you had any indication your brakes may be worn, including unusual sounds or pulsation while braking?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="brakes" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="brakes" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Does your vehicle have any mechanical issues or dashboard warning lights?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="mechanicalIssues" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="mechanicalIssues" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Does your vehicle have a rebuilt or salvage status?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="salvageStatus" value="Yes" required> Yes
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="salvageStatus" value="No" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Do you own your vehicle outright or is it leased or financed?</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="ownership" value="Owned" required> Owned
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="ownership" value="Leased" required> Leased
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="ownership" value="Financed" required> Financed
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 5: Additional Details -->
+                <section class="form-section" id="step5" style="display: none;">
+                    <h2>Additional Details</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Sell or Trade? <span class="text-danger">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="sellOrTrade" value="Sell" required> Sell
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="sellOrTrade" value="Trade" required> Trade
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 6: Contact Information -->
+                <section class="form-section" id="step6" style="display: none;">
+                    <h2>Contact Information</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Email <span class="text-danger">*</span></label>
+                                <input type="email" name="sellerEmail" placeholder="Enter your email" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" name="sellerPhone" placeholder="Enter your phone number" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="p-2 border rounded">
+                                    <h3>Phone Verification</h3>
+                                    <div id="phoneVerification">
+                                        <p class="text-muted">Phone verification functionality would be implemented here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="button" onclick="nextStep()" class="btn-next">
+                            Next
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 7: Review & Submit -->
+                <section class="form-section" id="step7" style="display: none;">
+                    <h2>Review & Submit</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-muted">
+                                Please review all the information you've provided. Make sure everything is accurate before submitting your listing.
+                            </p>
+                            <div class="alert alert-info">
+                                <p>
+                                    By submitting this form, you agree to our terms and conditions and verify that all provided information is accurate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <button type="button" onclick="prevStep()" class="btn-prev">
+                            Previous
+                        </button>
+                        <button type="submit" class="btn-next">
+                            Submit
+                        </button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>Aventis</h4>
+            <p>At Aventis, we simplify car transactions. Our secure platform offers a seamless experience for both buyers and sellers. With flexible financing options, owning your dream car has never been easier.</p>
+            <ul class="social-icons">
+              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Useful Links</h4>
+            <ul class="menu-list">
+              <li><a href="#"> Get Pre-Approved</a></li>
+              <li><a href="#">Sell Your Car</a></li>
+              <li><a href="#">Credit Application</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Additional Pages</h4>
+            <ul class="menu-list">
+              <li><a href="#">Sell Your Car</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item last-item">
+            <h4>Contact Us</h4>
+            <div class="contact-form">
+              <form id="contact footer-contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+                Copyright © 2025 Aventis
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script>
+        // Form data object
+        const formData = {
+            formname: "SellYourCar",
+            year: "",
+            make: "",
+            model: "",
+            city: "",
+            province: "",
+            bodyTrim: "",
+            style: "",
+            exteriorColour: "",
+            interiorColour: "",
+            transmission: "",
+            manufactureYear: "",
+            totalRun: "",
+            exteriorDamage: "",
+            interiorDamage: "",
+            accidentHistory: "",
+            smoked: "",
+            windshieldDamage: "",
+            keyFobs: "",
+            tireReplacement: "",
+            brakes: "",
+            mechanicalIssues: "",
+            salvageStatus: "",
+            ownership: "",
+            sellOrTrade: "",
+            sellerEmail: "",
+            sellerPhone: ""
+        };
+
+        let currentStep = 1;
+        const totalSteps = 7;
+        let termsAccepted = false;
+        let isPhoneVerified = false;
+
+        // Initialize the form
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+            window.scrollTo(0, 0);
+            
+            // Set up form submission
+            document.getElementById('sellCarForm').addEventListener('submit', handleFormSubmit);
+            
+            // Set up form field change listeners to update formData
+            const form = document.getElementById('sellCarForm');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    formData[this.name] = this.value;
+                });
+            });
+        });
+
+        function updateProgress() {
+            const progressPercentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+            document.getElementById('stepCounter').textContent = `Step ${currentStep} of ${totalSteps}`;
+            
+            // Hide all steps
+            for (let i = 1; i <= totalSteps; i++) {
+                document.getElementById(`step${i}`).style.display = 'none';
+            }
+            // Show current step
+            document.getElementById(`step${currentStep}`).style.display = 'block';
+            
+            // Update back button visibility
+            const backButton = document.querySelector(`#step${currentStep} .btn-prev`);
+            if (backButton) {
+                backButton.style.display = currentStep > 1 ? 'inline-block' : 'none';
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateProgress();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function nextStep() {
+            // Validate current step before proceeding
+            if (validateStep(currentStep)) {
+                if (currentStep === 6) { // Before the last step, show terms
+                    showTermsModal();
+                    return;
+                }
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateProgress();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        }
+
+        function validateStep(step) {
+            // Basic validation - check required fields are filled
+            const currentStepElement = document.getElementById(`step${step}`);
+            const requiredInputs = currentStepElement.querySelectorAll('[required]');
+            
+            for (let input of requiredInputs) {
+                if (!input.value) {
+                    alert(`Please fill in the ${input.labels[0].textContent.trim()} field`);
+                    input.focus();
+                    return false;
+                }
+                
+                // For radio buttons, check at least one is selected
+                if (input.type === 'radio') {
+                    const radioGroup = document.getElementsByName(input.name);
+                    let isChecked = false;
+                    for (let radio of radioGroup) {
+                        if (radio.checked) {
+                            isChecked = true;
+                            break;
+                        }
+                    }
+                    if (!isChecked) {
+                        alert(`Please select an option for ${input.name}`);
+                        return false;
+                    }
+                }
+            }
+            
+            return true;
+        }
+
+        function showTermsModal() {
+            // In a real implementation, this would show a modal with terms
+            // For now, we'll just proceed to the next step
+            termsAccepted = true;
+            currentStep++;
+            updateProgress();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            if (!termsAccepted || !isPhoneVerified) {
+                alert("Please complete phone verification and accept terms before submitting.");
+                return;
+            }
+            
+            // Collect all form data
+            const form = document.getElementById('sellCarForm');
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            try {
+                const response = await fetch(
+                    "https://script.google.com/macros/s/AKfycbypPBXDtS6zRVZt35GQ0x1zwhrBamJ-MHt2t-jCCK8DAOHcT_TibrB_0q5g0nwncpkdvQ/exec",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                        },
+                        body: new URLSearchParams(data),
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.result === "success") {
+                    alert("Form submitted successfully!!");
+                    form.reset();
+                    currentStep = 1;
+                    updateProgress();
+                } else {
+                    alert("Submission failed. Please try again.");
+                }
+            } catch (error) {
+                console.error("Submission error:", error);
+                alert("An error occurred while submitting your application. Please try again later.");
+            }
+        }
+    </script>
+</body>
+</html>
