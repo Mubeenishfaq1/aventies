@@ -1,549 +1,849 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+  <title>Aventis - Get Pre Approved</title>
+  <!-- Bootstrap CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <!-- Tailwind CSS (for prototyping only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for Brands -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <head>
+  <style>
+    /* Custom styles for the sell car form */
+    .sell-car-form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .sell-car-form h1 {
+      color: #2a2a2a;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .sell-car-form h2 {
+      color: #2a2a2a;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .sell-car-form label {
+      color: #4a4a4a;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .sell-car-form input,
+    .sell-car-form select,
+    .sell-car-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .sell-car-form .form-section {
+      border: 1px solid #eee;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .progress-bar {
+      height: 6px;
+      background-color: #e9ecef;
+      border-radius: 3px;
+      margin-bottom: 5px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #f33f3f;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+    .step-counter {
+      text-align: center;
+      font-size: 12px;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+    .btn-next {
+      background-color: #f33f3f;
+      color: white;
+      border: none;
+      padding: 8px 25px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-next:hover {
+      background-color: #d62c2c;
+    }
+    .btn-prev {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 8px 25px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-prev:hover {
+      background-color: #5a6268;
+    }
+    /* Radio button styling */
+    .radio-group {
+      display: flex;
+      gap: 15px;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+    }
+    .radio-option input {
+      width: auto;
+      margin-right: 5px;
+      margin-bottom: 0;
+    }
+    /* Utility class to hide elements */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>Aventis</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-  </head>
-
-  <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
+  <!-- Sub-Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+          <ul class="left-info">
+            <li><a href="#"><i class="fa fa-envelope"></i>contact@carbuyerconnect.com</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>+1 (437) 435-5719</a></li>
+          </ul>
         </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@carbuyerconnect.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>+1 (437) 435-5719</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
+        <div class="col-md-4">
+          <ul class="right-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
         </div>
       </div>
     </div>
-    
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Aventis<em> </em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="cars.html">Cars</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-              
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">Sell Your Car
-                    <a class="dropdown-item" href="blog.html">Blog</a>
-                    <a class="dropdown-item" href="team.html">Team</a>
-                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                    <a class="dropdown-item" href="terms.html">Terms</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Crdit Financing
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+  </div>
 
-    <!-- Page Content -->
-    <div class="page-heading header-text">
+  <!-- Main Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Get Pre-Approved
-            <span.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="services">
-      <div class="container">
-        <form action="#" id="contact">
-          <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Used/New:</label>
-           
-                       <select class="form-control">
-                            <option value="">All</option>
-                            <option value="new">New vehicle</option>
-                            <option value="used">Used vehicle</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Vehicle Type:</label>
-           
-                       <select class="form-control">
-                            <option value="">--All --</option>
-                            <option value="">--All --</option>
-                            <option value="">--All --</option>
-                            <option value="">--All --</option>
-                            <option value="">--All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Make:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Model:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Price:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Mileage:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Engine size:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Power:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Fuel:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Gearbox:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Doors:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-      
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                      <label>Number of seats:</label>
-           
-                       <select class="form-control">
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                            <option value="">-- All --</option>
-                       </select>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="col-sm-4 offset-sm-4">
-            <div class="main-button text-center">
-                <a href="#" class="filled-button">Search</a>
-            </div>
-          </div>
-          <br>
-          <br>
-        </form>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-1-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-2-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-3-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-4-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-5-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-6-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                  </span>
-                </div>
-
-                <p>
-                  <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                </p>
-                <a href="car-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-        </div>
-
-        <br>
-        <br>
-
-        <nav>
-          <ul class="pagination pagination-lg justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-                <span class="sr-only">Previous</span>
-              </a>
+        <a class="navbar-brand" href="index.html"><h2>Aventis<em> </em></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">»</span>
-                <span class="sr-only">Next</span>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="cars.html">Cars</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" 
+                 aria-haspopup="true" aria-expanded="false">About</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item active" href="about.html">Sell Your Car</a>
+                <a class="dropdown-item" href="blog.html">Blog</a>
+                <a class="dropdown-item" href="team.html">Team</a>
+                <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                <a class="dropdown-item" href="faq.html">FAQ</a>
+                <a class="dropdown-item" href="terms.html">Terms</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="creditform.html">Credit Financing</a>
             </li>
           </ul>
-        </nav>
-
-        <br>
-        <br>
-        <br>
-        <br>
+        </div>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>Car Dealer Website</h4>
-            <p>At Aventis, we simplify car transactions. Our secure platform offers a seamless experience for both buyers and sellers. With flexible financing options, owning your dream car has never been easier.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
+  <!-- Main Content: Multi-Step Form -->
+  <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md sell-car-form">
+      <!-- Progress Section -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <div><!-- Additional content if needed --></div>
+          <p id="timeRemaining" class="text-sm text-gray-500">3 minutes to complete</p>
+        </div>
+        <div class="relative pt-1">
+          <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+            <div id="progressBarFill" class="flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 transition-all duration-300" style="width: 0%;"></div>
           </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Get Pre-Approved</a></li>
-              <li><a href="#">Sell Your Car</a></li>
-              <li><a href="#">Credit Financing</a></li>
-             
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">Sell Your Car</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Terms</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
+          <p id="stepCounter" class="text-center text-sm text-gray-600">Step 1 of 16</p>
+        </div>
+      </div>
+
+      <!-- Form (novalidate disables native validation) -->
+      <form id="carLoanForm" novalidate>
+        <!-- Step 1: Car Type (Grid) -->
+        <section id="step1" class="form-section">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What type of vehicle are you looking for?</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="Sedan">
+              <img src="https://i.ibb.co/prfJTH6k/sedan-500px.webp" alt="Sedan" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">Sedan</p>
+            </div>
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="Coupe">
+              <img src="https://i.ibb.co/rRpML4qX/coupe-500px.webp" alt="Coupe" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">Coupe</p>
+            </div>
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="SUVs">
+              <img src="https://i.ibb.co/Xx8PyTpx/suv-500px.webp" alt="SUVs" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">SUVs</p>
+            </div>
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="Hatchback">
+              <img src="https://i.ibb.co/0jq05FMy/hatchback-500px.webp" alt="Hatchback" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">Hatchback</p>
+            </div>
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="Trucks and Pickups">
+              <img src="https://i.ibb.co/8JK6H4y/truck-500px.webp" alt="Trucks and Pickups" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">Trucks and Pickups</p>
+            </div>
+            <div class="car-option relative cursor-pointer border-2 border-gray-300 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105" data-value="Minivan">
+              <img src="https://i.ibb.co/dsnV40Jq/minivan-500px.webp" alt="Minivan" class="w-full h-24 object-cover rounded-md">
+              <p class="text-center mt-2 font-medium">Minivan</p>
             </div>
           </div>
+          <input type="hidden" name="carType" id="carType" required>
+        </section>
+
+        <!-- Step 2: Budget (Buttons in Flex Layout) -->
+        <section id="step2" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your budget?</h2>
+          <div id="budgetOptions" class="flex flex-wrap gap-2 mt-2">
+            <button type="button" class="budget-option px-4 py-2 border-2 rounded-md text-black border-black opacity-70" data-value="Under $400 / Month">
+              Under $400 / Month
+            </button>
+            <button type="button" class="budget-option px-4 py-2 border-2 rounded-md text-black border-black opacity-70" data-value="$400 - 499 / Month">
+              $400 - 499 / Month
+            </button>
+            <button type="button" class="budget-option px-4 py-2 border-2 rounded-md text-black border-black opacity-70" data-value="$500 - 600 / Month">
+              $500 - 600 / Month
+            </button>
+            <button type="button" class="budget-option px-4 py-2 border-2 rounded-md text-black border-black opacity-70" data-value="Over $600 / Month">
+              Over $600 / Month
+            </button>
+          </div>
+          <input type="hidden" name="budget" id="budget" required>
+        </section>
+
+        <!-- Step 3: Trade-In -->
+        <section id="step3" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Do you have a trade-in?</h2>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="trade-option px-4 py-2 border-2 rounded-md text-black border-black" data-value="no">
+              No
+            </button>
+            <button type="button" class="trade-option px-4 py-2 border-2 rounded-md text-black border-black" data-value="yes">
+              Yes
+            </button>
+            <button type="button" class="trade-option px-4 py-2 border-2 rounded-md text-black border-black" data-value="unsure">
+              Unsure
+            </button>
+          </div>
+          <input type="hidden" name="tradeIn" id="tradeIn" required>
+        </section>
+
+        <!-- Step 4: Credit Rating (Flex Wrapped Buttons) -->
+        <section id="step4" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your estimated credit rating?</h2>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Excellent">
+              Excellent (760-900)
+            </button>
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Very Good">
+              Very Good (725-759)
+            </button>
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Good">
+              Good (660-724)
+            </button>
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Fair">
+              Fair (600-659)
+            </button>
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Poor">
+              Poor (300-599)
+            </button>
+            <button type="button" class="credit-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="No Credit / Unsure">
+              No Credit / Unsure
+            </button>
+          </div>
+          <input type="hidden" name="creditRating" id="creditRating" required>
+        </section>
+
+        <!-- Step 5: Employment Status (Flex Wrapped Buttons) -->
+        <section id="step5" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your employment status?</h2>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <button type="button" class="employment-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Employed">
+              Employed
+            </button>
+            <button type="button" class="employment-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Self-Employed">
+              Self-Employed
+            </button>
+            <button type="button" class="employment-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Student">
+              Student
+            </button>
+            <button type="button" class="employment-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Retired / Pension">
+              Retired / Pension
+            </button>
+            <button type="button" class="employment-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Other">
+              Other
+            </button>
+          </div>
+          <input type="hidden" name="employmentStatus" id="employmentStatus" required>
+        </section>
+
+        <!-- Step 6: Income Details (Flex Wrapped Buttons) -->
+        <section id="step6" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Income Details - Please Select One</h2>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <button type="button" class="income-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="I Know My Annual Salary">
+              I Know My Annual Salary
+            </button>
+            <button type="button" class="income-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="I Know My Hourly Wage">
+              I Know My Hourly Wage
+            </button>
+            <button type="button" class="income-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="I Know My Monthly Income">
+              I Know My Monthly Income
+            </button>
+            <button type="button" class="income-option px-4 py-2 border-2 rounded-md text-black border-gray-300" data-value="Other">
+              Other
+            </button>
+          </div>
+          <input type="hidden" name="incomeDetails" id="incomeDetails" required>
+        </section>
+
+        <!-- Step 7: Annual Income -->
+        <section id="step7" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your annual income before taxes & deductions?</h2>
+          <input type="number" name="annualIncome" id="annualIncome" class="w-full p-2 border rounded-md" placeholder="Enter your annual income" required>
+        </section>
+
+        <!-- Step 8: Income Duration -->
+        <section id="step8" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">How long have you been receiving this income?</h2>
+          <div class="flex gap-4">
+            <div class="w-1/2">
+              <label class="block text-sm font-medium text-gray-700">Years</label>
+              <input type="number" name="incomeYears" id="incomeYears" class="w-full p-2 border rounded-md" placeholder="Enter years" required>
+            </div>
+            <div class="w-1/2">
+              <label class="block text-sm font-medium text-gray-700">Months</label>
+              <input type="number" name="incomeMonths" id="incomeMonths" class="w-full p-2 border rounded-md" placeholder="Enter months" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 9: Workplace -->
+        <section id="step9" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Where do you work?</h2>
+          <div class="flex flex-col gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Company Name</label>
+              <input type="text" name="companyName" id="companyName" class="w-full p-2 border rounded-md" placeholder="Enter company name" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Job Title</label>
+              <input type="text" name="jobTitle" id="jobTitle" class="w-full p-2 border rounded-md" placeholder="Enter job title" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 10: Monthly Income -->
+        <section id="step10" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your monthly income before taxes & deductions?</h2>
+          <input type="number" name="monthlyIncome" id="monthlyIncome" class="w-full p-2 border rounded-md" placeholder="Enter your monthly income" required>
+        </section>
+
+        <!-- Step 11: Vehicle Location -->
+        <section id="step11" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Vehicle Location</h2>
+          <input type="text" name="vehicleLocation" id="vehicleLocation" class="w-full p-2 border rounded-md" placeholder="Enter vehicle location in Canada" required>
+        </section>
+
+        <!-- Step 12: Address Duration -->
+        <section id="step12" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">How long have you lived at your current address?</h2>
+          <div class="flex gap-4">
+            <div class="w-1/2">
+              <label class="block text-sm font-medium text-gray-700">Years</label>
+              <input type="number" name="yearsAtAddress" id="yearsAtAddress" class="w-full p-2 border rounded-md" placeholder="Enter years" required>
+            </div>
+            <div class="w-1/2">
+              <label class="block text-sm font-medium text-gray-700">Months</label>
+              <input type="number" name="monthsAtAddress" id="monthsAtAddress" class="w-full p-2 border rounded-md" placeholder="Enter months" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 13: Home Status -->
+        <section id="step13" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Do you rent or own your home?</h2>
+          <div class="flex space-x-4 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="homeStatus" value="rent" class="form-radio" required>
+              <span>Rent</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="homeStatus" value="own" class="form-radio" required>
+              <span>Own</span>
+            </label>
+          </div>
+          <div id="rentAmountDiv" class="mt-4 hidden">
+            <label class="block text-sm font-medium text-gray-700">Monthly Rent Amount</label>
+            <input type="number" name="rentAmount" id="rentAmount" class="w-full p-2 border rounded-md" placeholder="Enter rent amount" required>
+          </div>
+        </section>
+
+        <!-- Step 14: Citizenship & Driver's Licence -->
+        <section id="step14" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Are you a Canadian citizen or permanent resident?</h2>
+          <select name="citizenship" id="citizenship" class="w-full p-2 border rounded-md" required>
+            <option value="">Select</option>
+            <option value="Canadian Citizen">Canadian Citizen</option>
+            <option value="Permanent Resident">Permanent Resident</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="mt-4">
+            <h3 class="text-lg font-medium">Do you have a valid Canadian driver's licence?</h3>
+            <div class="flex space-x-4 mt-2">
+              <label class="flex items-center space-x-2">
+                <input type="radio" name="driversLicense" value="Yes" class="form-radio" required>
+                <span>Yes</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="radio" name="driversLicense" value="No" class="form-radio" required>
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 15: Date of Birth -->
+        <section id="step15" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">What is your date of birth?</h2>
+          <input type="date" name="dateOfBirth" id="dateOfBirth" class="w-full p-2 border rounded-md" required>
+        </section>
+
+        <!-- Step 16: Contact Information -->
+        <section id="step16" class="form-section hidden">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Almost done! Enter your contact information</h2>
+          <input type="text" name="firstName" id="firstName" class="w-full p-2 border rounded-md" placeholder="First Name" required>
+          <input type="text" name="lastName" id="lastName" class="w-full p-2 border rounded-md mt-2" placeholder="Last Name" required>
+          <input type="email" name="email" id="email" class="w-full p-2 border rounded-md mt-2" placeholder="Email" required>
+          <input type="tel" name="phoneNumber" id="phoneNumber" class="w-full p-2 border rounded-md mt-2" placeholder="Phone Number" required>
+          <div class="mt-4">
+            <p class="text-sm text-gray-600">Phone verification functionality would be implemented here.</p>
+          </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="mt-8 flex justify-between">
+          <button type="button" id="backButton" class="px-8 py-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400 transition duration-300" disabled>Back</button>
+          <button type="submit" id="nextButton" class="ml-auto px-8 py-2 bg-blue-500 text-black rounded-lg hover:bg-blue-600 transition duration-300">Next</button>
         </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Popup for Vehicle Location (Step 11) -->
+  <div id="popupOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+    <div class="bg-white p-6 rounded shadow-md text-center w-full max-w-lg overflow-y-auto">
+      <div id="popupLoader" class="mb-4">
+        <p class="text-lg font-semibold">Searching for vehicle...</p>
       </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-                Copyright © 2020 Company Name
-                - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
-            </p>
+      <div id="popupResult" class="hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none" class="mx-auto">
+          <path d="M30 15.5C30 7 23.2258 0 15 0C6.71371 0 0 7 0 15.5C0 24.0625 6.71371 31 15 31C23.2258 31 30 24.0625 30 15.5ZM13.246 23.75C12.8831 24.125 12.2177 24.125 11.8548 23.75L5.56452 17.25C5.20161 16.875 5.20161 16.1875 5.56452 15.8125L6.95565 14.4375C7.31855 14 7.92339 14 8.28629 14.4375L12.5806 18.8125L21.6532 9.4375C22.0161 9 22.621 9 22.9839 9.4375L24.375 10.8125C24.7379 11.1875 24.7379 11.875 24.375 12.25L13.246 23.75Z" fill="#00C129"/>
+        </svg>
+        <h2 class="mt-5 font-semibold">Congratulations!</h2>
+        <p class="mt-5 text-xs">You Qualify for Pre-Approval near location:</p>
+        <p id="popupLocation" class="mt-2.5 border border-neutral-50 p-3 text-primary-75"></p>
+        <p class="mt-2.5 text-xs">By clicking Continue, you agree to our Terms of Service.</p>
+        <button id="continuePopup" class="rounded-sm px-7 py-3.5 font-semibold leading-6 bg-blue-500 text-white hover:bg-blue-600 mt-2.5 w-full">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer-item">
+          <h4>Aventis</h4>
+          <p>
+            At Aventis, we simplify car transactions. Our secure platform offers a seamless experience for both buyers and sellers. With flexible financing options, owning your dream car has never been easier.
+          </p>
+          <ul class="social-icons">
+            <li><a rel="nofollow" href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Useful Links</h4>
+          <ul class="menu-list">
+            <li><a href="#">Get pre-approved</a></li>
+            <li><a href="#">Sell your car</a></li>
+            <li><a href="#">Credit Application</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Additional Pages</h4>
+          <ul class="menu-list">
+            <li><a href="#">Sell Your Car</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item last-item">
+          <h4>Contact Us</h4>
+          <div class="contact-form">
+            <form id="contact footer-contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </footer>
+  
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright © 2025 Aventis</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Global State Variables
+      let currentStep = 1;
+      const totalSteps = 16;
+      let isPhoneVerified = false; // Simulated state
+      const formData = {
+        carType: "",
+        budget: "",
+        tradeIn: "",
+        creditRating: "",
+        employmentStatus: "",
+        incomeDetails: "",
+        annualIncome: "",
+        incomeYears: "",
+        incomeMonths: "",
+        companyName: "",
+        jobTitle: "",
+        monthlyIncome: "",
+        vehicleLocation: "",
+        yearsAtAddress: "",
+        monthsAtAddress: "",
+        homeStatus: "",
+        rentAmount: "",
+        citizenship: "",
+        driversLicense: "",
+        dateOfBirth: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: ""
+      };
+      const steps = [
+        { title: "What type of vehicle are you looking for" },
+        { title: "What is your budget" },
+        { title: "Do you have a trade-in" },
+        { title: "What is your estimated credit rating" },
+        { title: "What is your employment status" },
+        { title: "Income Details - Please Select One" },
+        { title: "What is your annual income before taxes & deductions" },
+        { title: "How long have you been receiving this income" },
+        { title: "Where do you work" },
+        { title: "What is your monthly income before taxes & deductions" },
+        { title: "Vehicle Location" },
+        { title: "How long have you lived at your current address" },
+        { title: "Do you rent or own your home" },
+        { title: "Are you a Canadian citizen or permanent resident" },
+        { title: "What is your date of birth" },
+        { title: "Almost done! Enter your contact information" }
+      ];
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
-
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
+      // Update time remaining text based on current step
+      function updateTimeRemaining() {
+        const timeDisplay = document.getElementById("timeRemaining");
+        if (currentStep >= 1 && currentStep <= 5) {
+          timeDisplay.textContent = "3 minutes to complete";
+        } else if (currentStep >= 6 && currentStep <= 11) {
+          timeDisplay.textContent = "2 minutes to complete";
+        } else if (currentStep >= 12 && currentStep <= totalSteps) {
+          timeDisplay.textContent = "1 minute to complete";
+        }
       }
-    </script>
 
-  </body>
+      // Scroll to top when step changes
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Custom validation for the current (visible) step
+      function validateCurrentStep() {
+        let valid = true;
+        const inputs = document.querySelectorAll("#step" + currentStep + " input, #step" + currentStep + " select, #step" + currentStep + " textarea");
+        inputs.forEach(input => {
+          if (!input.checkValidity()) {
+            valid = false;
+            input.focus();
+          }
+        });
+        return valid;
+      }
+
+      // Update progress bar, step counter, and show the current step
+      function updateProgress() {
+        const progressBarFill = document.getElementById("progressBarFill");
+        const stepCounter = document.getElementById("stepCounter");
+        progressBarFill.style.width = ((currentStep - 1) / (totalSteps - 1)) * 100 + "%";
+        stepCounter.textContent = "Step " + currentStep + " of " + totalSteps;
+        updateTimeRemaining();
+        document.querySelectorAll(".form-section").forEach(section => section.classList.add("hidden"));
+        const currentSection = document.getElementById("step" + currentStep);
+        if (currentSection) { currentSection.classList.remove("hidden"); }
+        document.getElementById("backButton").disabled = currentStep === 1;
+        document.getElementById("nextButton").textContent = currentStep === totalSteps ? "Submit" : "Next";
+        scrollToTop();
+      }
+      updateProgress();
+
+      // Handle Car Option click (Step 1)
+      document.querySelectorAll(".car-option").forEach(option => {
+        option.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.carType = value;
+          document.getElementById("carType").value = value;
+          document.querySelectorAll(".car-option").forEach(opt => opt.classList.remove("border-blue-500"));
+          this.classList.add("border-blue-500");
+        });
+      });
+
+      // Handle Budget Option click (Step 2)
+      document.querySelectorAll(".budget-option").forEach(button => {
+        button.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.budget = value;
+          document.getElementById("budget").value = value;
+          document.querySelectorAll(".budget-option").forEach(btn => btn.classList.remove("font-bold"));
+          this.classList.add("font-bold");
+        });
+      });
+
+      // Handle Trade-In Option click (Step 3)
+      document.querySelectorAll(".trade-option").forEach(button => {
+        button.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.tradeIn = value;
+          document.getElementById("tradeIn").value = value;
+          document.querySelectorAll(".trade-option").forEach(btn => btn.classList.remove("font-bold"));
+          this.classList.add("font-bold");
+        });
+      });
+
+      // Handle Credit Rating Option click (Step 4)
+      document.querySelectorAll(".credit-option").forEach(button => {
+        button.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.creditRating = value;
+          document.getElementById("creditRating").value = value;
+          document.querySelectorAll(".credit-option").forEach(btn => btn.classList.remove("border-black", "font-semibold"));
+          this.classList.add("border-black", "font-semibold");
+        });
+      });
+
+      // Handle Employment Status Option click (Step 5)
+      document.querySelectorAll(".employment-option").forEach(button => {
+        button.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.employmentStatus = value;
+          document.getElementById("employmentStatus").value = value;
+          document.querySelectorAll(".employment-option").forEach(btn => btn.classList.remove("border-black", "font-semibold"));
+          this.classList.add("border-black", "font-semibold");
+        });
+      });
+
+      // Handle Income Details Option click (Step 6)
+      document.querySelectorAll(".income-option").forEach(button => {
+        button.addEventListener("click", function() {
+          const value = this.getAttribute("data-value");
+          formData.incomeDetails = value;
+          document.getElementById("incomeDetails").value = value;
+          document.querySelectorAll(".income-option").forEach(btn => btn.classList.remove("border-black", "font-semibold"));
+          this.classList.add("border-black", "font-semibold");
+        });
+      });
+
+      // Generic input change handling
+      function handleInputChange(e) {
+        const { name, value } = e.target;
+        formData[name] = value;
+      }
+      document.querySelectorAll("input, select, textarea").forEach(input => {
+        input.addEventListener("change", handleInputChange);
+      });
+
+      // Form submission (or next step) handling
+      function handleSubmit(e) {
+        e.preventDefault();
+        if (!validateCurrentStep()) return;
+        if (currentStep === 11) {
+          // Show popup for Vehicle Location step
+          document.getElementById("popupOverlay").classList.remove("hidden");
+          document.getElementById("popupLoader").style.display = "block";
+          document.getElementById("popupResult").classList.add("hidden");
+          setTimeout(() => {
+            document.getElementById("popupLoader").style.display = "none";
+            document.getElementById("popupResult").classList.remove("hidden");
+            document.getElementById("popupLocation").textContent = formData.vehicleLocation || "Your Location";
+          }, 2000);
+          return;
+        }
+        if (currentStep === steps.length) {
+          if (!isPhoneVerified) {
+            alert("Please verify your phone number before submitting.");
+            return;
+          }
+          fetch("https://script.google.com/macros/s/AKfycbzLmKuorJC3u7_rU7_t47B9B2Y1USeCRz6aX1qeMoXqWVug-On5yHmPP1W-v0zxg_k/exec", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+            body: new URLSearchParams(formData)
+          })
+          .then(response => response.json())
+          .then(result => {
+            if (result.result === "success") {
+              alert("Congratulations! Our team will reach out to you soon!");
+            } else {
+              alert("Submission failed. Please try again.");
+            }
+            document.getElementById("carLoanForm").reset();
+            currentStep = 1;
+            updateProgress();
+          })
+          .catch(error => {
+            console.error("Submission error:", error);
+            alert("An error occurred while submitting your application. Please try again later.");
+          });
+        } else {
+          currentStep++;
+          updateProgress();
+        }
+      }
+      document.getElementById("carLoanForm").addEventListener("submit", handleSubmit);
+
+      // Back button handling
+      document.getElementById("backButton").addEventListener("click", function() {
+        if (currentStep > 1) {
+          currentStep--;
+          updateProgress();
+        }
+      });
+
+      // Continue button on popup handling
+      document.getElementById("continuePopup").addEventListener("click", function() {
+        document.getElementById("popupOverlay").classList.add("hidden");
+        currentStep++;
+        updateProgress();
+      });
+
+      // Toggle rent amount field for home status (Step 13)
+      document.querySelectorAll('input[name="homeStatus"]').forEach(radio => {
+        radio.addEventListener("change", function() {
+          if (this.value === "rent") {
+            document.getElementById("rentAmountDiv").classList.remove("hidden");
+          } else {
+            document.getElementById("rentAmountDiv").classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/accordions.js"></script>
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0;
+    function clearField(t) {
+      if (!cleared[t.id]) {
+        cleared[t.id] = 1;
+        t.value = '';
+        t.style.color = '#fff';
+      }
+    }
+  </script>
+</body>
 </html>
